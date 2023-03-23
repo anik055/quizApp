@@ -7,8 +7,8 @@ import { useNavigate } from "react-router-dom";
 
 export default function Result() {
   const navigate = useNavigate();
-  const currentQuizes = getItem("currentQuizes");
-  const countRightAnswer = currentQuizes.reduce(
+  const quizData = getItem("quizApp");
+  const countRightAnswer = quizData?.currentQuizes.reduce(
     (total, curr) =>
       curr.correctAnswer === curr.givenAnswer ? total + 1 : total + 0,
     0

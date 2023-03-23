@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
-import { setItem } from "../../../Helper/Ls";
+import { getItem, setItem } from "../../../Helper/Ls";
 import "./home.css";
 
 function Home() {
@@ -10,8 +10,8 @@ function Home() {
 
   const handleStartQuiz = () => {
     if (username) {
-      setItem("username", username);
-      
+      const quizData = getItem('quizApp')
+      setItem("quizApp", {...quizData, userName:username});
     }
     history("/quiz");
   };

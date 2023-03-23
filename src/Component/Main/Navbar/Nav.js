@@ -5,7 +5,7 @@ import { getItem } from "../../../Helper/Ls";
 
 export default function Nav() {
   const navigate = useNavigate();
-  const username = getItem("username");
+  const quizData = getItem("quizApp");
   return (
     <div className="navigation">
       <div
@@ -16,7 +16,7 @@ export default function Nav() {
       >
         Quiz App
       </div>
-      <div className="name">{username || "No Name"}</div>
+      <div className="name">{quizData?.userName || "No Name"}</div>
     </div>
   );
 }

@@ -18,12 +18,15 @@ function Timer({ answers }) {
   useEffect(() => {
     if (timeRemaining === 0) {
       clearInterval(intervalRef.current);
-      const prevTakenQuizes = getItem("takenQuizes");
-      setItem("takenQuizes", [...prevTakenQuizes, answers]);
-      setItem("currentQuizes", answers);
+      const quizData = getItem("quizApp");
+      setItem("quizApp", {
+        ...quizData,
+        takenQuizes: [...quizData?.takenQuizes, answers],
+        currentQuizes: answers,
+      });
       navigate("/result");
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeRemaining]);
 
   const minutes = Math.floor(timeRemaining / 60);

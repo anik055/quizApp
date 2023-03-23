@@ -25,12 +25,11 @@ function Quiz() {
     if (currentIndex + 1 < questions.length) {
       setCurrentIndex((prev) => prev + 1);
     } else {
-      const prevTakenQuizes = getItem("takenQuizes");
-      const updatedTakenQuizes = prevTakenQuizes
-        ? [...prevTakenQuizes, answers]
+      const quizData = getItem("quizApp");
+      const updatedTakenQuizes = quizData?.takenQuizes
+        ? [...quizData?.takenQuizes, answers]
         : [answers];
-      setItem("takenQuizes", updatedTakenQuizes);
-      setItem("currentQuizes", answers);
+      setItem("quizApp", {...quizData, takenQuizes: updatedTakenQuizes,currentQuizes :  answers});
       navigate("/result");
     }
   };
