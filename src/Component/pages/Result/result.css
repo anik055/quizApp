@@ -1,0 +1,17 @@
+.result {
+  display: flex;
+  align-items: center;
+  padding: 0px 50px;
+}
+.score {
+  font-size: 40px;
+}
+.resultItem {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.newQuizBtn {
+  display: flex;
+  justify-content: center;
+}

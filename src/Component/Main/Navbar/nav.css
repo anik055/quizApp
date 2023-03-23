@@ -1,0 +1,20 @@
+.navigation {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aliceblue;
+  padding: 5px 50px;
+}
+
+.logo {
+  cursor: pointer;
+  font-size: 30px;
+  color: rgb(3, 169, 188);
+  font-weight: bold;
+}
+
+.name {
+  font-size: 25px;
+  color: rgb(82, 129, 135);
+}

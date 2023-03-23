@@ -1,0 +1,44 @@
+.radio-input {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    user-select: none;
+  }
+  
+  .radio-input input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .radio-mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid #cccccc;
+  }
+  
+  .radio-input input:checked ~ .radio-mark {
+    background-color: rgb(3, 169, 188);
+  }
+  
+  .radio-input input:checked ~ .radio-mark:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
