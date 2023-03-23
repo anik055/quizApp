@@ -23,6 +23,7 @@ function Timer({ answers }) {
       setItem("currentQuizes", answers);
       navigate("/result");
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeRemaining]);
 
   const minutes = Math.floor(timeRemaining / 60);
